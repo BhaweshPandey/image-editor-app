@@ -1,0 +1,93 @@
+/* General page styles */
+.page-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.canvas-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+canvas {
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.controls-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  gap: 10px;
+}
+
+.controls-section input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.controls-section button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.controls-section button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .canvas-section,
+  .controls-section {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .canvas-section {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .canvas-section {
+    margin-bottom: 15px;
+  }
+
+  canvas {
+    max-width: 300px; /* Smaller canvas size for mobile */
+    height: auto;
+  }
+
+  .controls-section input,
+  .controls-section button {
+    max-width: 250px;
+  }
+}
